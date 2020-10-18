@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Git Tutorial for Beginners!</title>
+</head>
+
+<body class="bg-light">
+    <!-- heading of the git hub tutorial -->
+    <div class="container  text-center ">
+        <div class="row bg-secondary">
+            <h2 class="col py-4">GitHub tutorial for Beginners</h2>
+        </div>
+    </div>
+    <!-- content to github   -->
+    <div class="container bg-white pt-2">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-lg-8 col-sm-12 col-md-10 col-xl-8 ">
+                <p class="text-justify ">GitHub, Inc. is an American multinational corporation that provides hosting for
+                    software development and version control using Git. It offers the distributed version control and
+                    source code management (SCM) functionality of Git, plus its own features. It provides access control
+                    and several collaboration features such as bug tracking, feature requests, task management,
+                    continuous integration and wikis for every project.Headquartered in California, it has been a
+                    subsidiary of Microsoft since 2018.</p>
+                <p class="text-justify">GitHub offers its basic services free of charge. Its more advanced professional
+                    and enterprise services are commercial.Free GitHub accounts are commonly used to host open-source
+                    projects.As of January 2019, GitHub offers unlimited private repositories to all plans, including
+                    free accounts, but allowed only up to three collaborators per repository for free.Starting from
+                    April 15, 2020, the free plan allows unlimited collaborators, but restricts private repositories to
+                    2,000 actions minutes per month.As of January 2020, GitHub reports having over 40 million users and
+                    more than 190 million repositories (including at least 28 million public repositories),making it the
+                    largest host of source code in the world.<br>
+                    <small class="small">Source wikipedia,To read more click <a href="https://en.wikipedia.org/wiki/GitHub"  target="_blank">here</a></small></p>
+
+                <p class="text-justify">This blog will walk you through create a local to pusing that repository
+                    to remote using git bash.Let's get statted.We need git bash install in our system.Make sure you
+                    have git bash installed.if not,to download git bash click <a href="https://git-scm.com/downloads"  target="_blank">here</a>. After downloading install in your
+                    system by double clikcking of the exe file.</p>
+                <!-- Initialized git repositories   -->
+                <div class="pt-5 pb-5">
+                    <h5 class="">Step 1: Initilize the git repository to local</h5>
+                    <p class="text-justify">To make the repository as a git repository in your local we need to add .git
+                        file into your respective repositories.To add a git repository,first we need to land tp
+                        respective repository,then  right click on  empty space and click git bash here,type
+                        below  command to add .git file in your respective repository.you will get the message Reinitialized  existing Git repository in E:/git-tut/.git/,In my case folder was residing in E/git-tut.</p>
+                    <div class="card bg-light shadow p-2 bg-white rounded">
+                        <div class="card-body ">//Initialized empty Git repository<br>$ git init</div>
+                    </div>
+                </div>
+                <!-- commit the code to treey -->
+                <div class="pb-5">
+                    <h5 class="mpt-5">Step 2: Stage and commit the file</h5>
+                    <p class="text-justify">Now we are ready to stage and commit the code to this git tree,by default
+                        the
+                        tree will be resides on the master branch.we can navigate through as many branch you want by
+                        creating new branch to master.Git follw three layer architecture to add the code to branch.To
+                        push
+                        the file to existing branch first we need to stage the files then commit the files to that
+                        branch.The
+                        three layer Architecture diagram are shown in below picture.commnd to add the file to staging
+                        and
+                        commit is shown below.</p>
+                    <div class="card bg-light shadow-sm p-3  bg-white rounded">
+                        <img src="images/git_three_layer_arch.png" class="float-left mg-fluid"
+                            alt="three layer architecture" width="100%" height="300rem">
+                        <div class="card-body shadow p-3 mt-3 bg-white rounded ">//add file to staging<br>
+                            $ git add .<br>
+                            //add file to commit <br>
+                            $ git commit -m "commit message"<br>
+                        </div>
+                    </div>
+                </div>
+                <!-- add remote repository -->
+                <div class="pb-2">
+                    <h5 class="">Step 3: Add remote reposetry</h5>
+                    <p class="text-justify">We are successfully staged and commit the file to current branch.Now it time
+                        to push to remote git repository.At this satge we need a github account.if you dont have an
+                        account,create one.Now click on plus sign on github account to create a new repository.Write a
+                        meaningful name,choose type of repository you want to create,add read me file(optional,we can
+                        add later as well) and click create repository.</p>
+                    <div class="card bg-light shadow-sm p-3 mb-1 bg-white rounded">
+                        <img src="images/git-account-create.PNG" class="float-left mg-fluid" alt="create an account"
+                            width="100%" height="100%">
+                    </div>
+                </div>
+                <div class="pb-5">
+                    <p class=" text-justify">Once the repository will get created github will land on below page.Now we
+                        are ready to add github remote repository to local repository.To add the remote repository,click
+                        on code and copy https link to the git repository.Type below command to add remote repository to
+                        your local.</p>
+                    <div class="card bg-light shadow-sm p-3  bg-white rounded">
+                        <img src="images/git_copy_remote_link.PNG" class="float-left mg-fluid" alt="remote link"
+                            width="100%" height="100%">
+                        <div class="card-body shadow p-3  bg-white rounded ">//to add remote repository<br>
+                            $ git remote add origin https://github.com/prem2033/git-tut.git
+                        </div>
+                    </div>
+                </div>
+                <!-- push the code to repository -->
+                <h5 class="mt-2">Step 4: Push the code to remote repo</h5>
+                <p class="text-justify">we are set with the remote repository to our local,Now its time to push the files to remote repository from the local repository.To push the file type the below command.After successfully pushing the files we can check the respective remote folder.</p>
+                <div class="card bg-light shadow-sm p-3 mb-1 bg-white rounded bg-light">
+                    <img src="images/git_commit_result.png" class="float-left mg-fluid" alt="git commit " width="100%"
+                        height="100%">
+                    <div class="card-body bg-light shadow p-3 mb-1 bg-white rounded">//add push the code<br>
+                        $ git push origin branch_name<br>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+
+    <div>
+        <!-- Footer -->
+        <footer class="page-footer font-small  bg-secondary">            
+            <div class="footer-copyright text-center py-3 text-white">© 2020 Copyright by Author(PREM)
+            </div>
+        </footer>
+        <!-- Footer -->
+    </div>
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
